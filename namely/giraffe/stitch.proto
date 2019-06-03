@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package namely.giraffe;
+
+option go_package = "github.com/namely/giraffe-protos/giraffe";
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.FieldOptions {
+  optional Stitch field = 65020;
+}
+
+
+message Stitch {
+  // Service is the fully-qualified package and
+  // service name of the service, e.g. namely.profiles.ProfilesService
+  string service = 1;
+
+  // Method is the method to call within the service, e.g GetProfile
+  string method = 2;
+
+  // Request Parameter is the name of the field within the request type
+  // to set. The value of this field will be the value of the annotated
+  // stitch option.
+  string request_parameter = 3;
+
+  // Field name is the name of the field which will be added to the GraphQL
+  // schema
+  string field_name = 4;
+
+  // Hide field will hide the source field from the schema so only the stitched
+  // object is present
+  bool hide_field = 5
+}
