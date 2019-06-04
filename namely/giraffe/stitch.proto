@@ -7,7 +7,7 @@ option go_package = "github.com/namely/giraffe-protos/giraffe";
 import "google/protobuf/descriptor.proto";
 
 extend google.protobuf.FieldOptions {
-  Stitch field = 65020;
+  Stitch stitch = 165218;
 }
 
 
