@@ -7,7 +7,7 @@ option go_package = "github.com/namely/giraffe-protos/giraffe";
 import "google/protobuf/descriptor.proto";
 
 extend google.protobuf.FieldOptions {
-  optional Stitch field = 65020;
+  Stitch field = 65020;
 }
 
 
@@ -30,5 +30,5 @@ message Stitch {
 
   // Hide field will hide the source field from the schema so only the stitched
   // object is present
-  bool hide_field = 5
+  bool hide_field = 5;
 }
