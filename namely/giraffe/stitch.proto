@@ -2,14 +2,13 @@ syntax = "proto3";
 
 package namely.giraffe;
 
-option go_package = "github.com/namely/giraffe-proto";
+option go_package = "giraffe";
 
 import "google/protobuf/descriptor.proto";
 
 extend google.protobuf.FieldOptions {
   Stitch stitch = 165218;
 }
-
 
 message Stitch {
   // Service is the fully-qualified package and
@@ -31,4 +30,9 @@ message Stitch {
   // Hide field will hide the source field from the schema so only the stitched
   // object is present
   bool hide_field = 5;
+
+  // Request Quantifier is an optional quantifier for the method payload (e.g.
+  // byEmployment). The value of this field will act as a key for the payload {
+  // [requestQuantifier]: { [requestParamter]: <value> }}
+  string request_quantifier = 6;
 }
