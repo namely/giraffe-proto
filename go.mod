@@ -1,5 +1,5 @@
 module github.com/namely/giraffe-proto
 
-go 1.14
+go 1.17
 
-require github.com/golang/protobuf v1.3.5
+require google.golang.org/protobuf v1.26.0
