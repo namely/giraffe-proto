@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package namely.giraffe;
 
-option go_package = "giraffe";
+option go_package = "github.com/namely/giraffe-proto;giraffe";
 
 import "google/protobuf/descriptor.proto";
 
